@@ -65,10 +65,10 @@ android {
 
     signingConfigs {
         create("release") {
-            keyAlias = System.getenv("LUMO_KEY_ALIAS") ?: ""
-            keyPassword = System.getenv("LUMO_KEY_PASSWORD")
-            storeFile = System.getenv("LUMO_KEYSTORE_PATH")?.let { file(it) }
-            storePassword = System.getenv("LUMO_STORE_PASSWORD")
+            keyAlias = System.getenv("OMAX_KEY_ALIAS") ?: System.getenv("LUMO_KEY_ALIAS") ?: ""
+            keyPassword = System.getenv("OMAX_KEY_PASSWORD") ?: System.getenv("LUMO_KEY_PASSWORD")
+            storeFile = (System.getenv("OMAX_KEYSTORE_PATH") ?: System.getenv("LUMO_KEYSTORE_PATH"))?.let { file(it) }
+            storePassword = System.getenv("OMAX_STORE_PASSWORD") ?: System.getenv("LUMO_STORE_PASSWORD")
         }
     }
 

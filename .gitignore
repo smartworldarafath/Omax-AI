@@ -21,3 +21,7 @@ obsidian
 # Sentry Config File
 sentry.properties
 ci/scripts/fdroid_release.sh
+
+# Release binary APKs (uploaded via GitHub Releases)
+releases/*.apk
+releases/*.tmp

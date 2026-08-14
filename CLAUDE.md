@@ -15,7 +15,7 @@ The app has three flavor dimensions: `environment` (production/noble), `service`
 
 # Release builds
 ./gradlew bundleProductionStandardGmsRelease    # Production AAB (Play Store)
-./gradlew assembleProductionStandardNoGmsRelease # Production APK (NoGMS/F-Droid)
+./gradlew assembleProductionStandardNoGmsRelease # Production APK (NoGMS/Direct)
 
 # Static analysis
 ./gradlew detektNobleGmsDebug
@@ -30,7 +30,7 @@ The app has three flavor dimensions: `environment` (production/noble), `service`
 - `noble` = test/staging environment; `production` = production
 - `gms` = includes Google Play Billing + Sentry; `noGms` = GrapheneOS-compatible
 - `noWebViewDebug` = disables WebView remote debugging (for GrapheneOS flavor)
-- Release signing requires env vars: `LUMO_KEY_ALIAS`, `LUMO_KEY_PASSWORD`, `LUMO_KEYSTORE`, `LUMO_KEYSTORE_PASSWORD`
+- Release signing requires env vars: `OMAX_KEY_ALIAS`, `OMAX_KEY_PASSWORD`, `OMAX_KEYSTORE_PATH`, `OMAX_STORE_PASSWORD`
 
 ## Architecture
 
@@ -39,7 +39,7 @@ The app is a native Android shell around a web application served in a WebView. 
 ```
 MainActivity (single Activity)
   └── NavHost (Jetpack Compose)
-       └── MainScreen → WebView (renders the Lumo web app)
+       └── MainScreen → WebView (renders the Omax Ai web app)
                         ↑
                JS ↔ Android bridge (WebAppInterface)
 ```

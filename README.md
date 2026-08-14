@@ -1,25 +1,16 @@
-# Lumo Android App
+# Omax Ai Android App
 
-Lumo is the privacy-first AI assistant created by Proton, the team behind encrypted email, VPN, password manager, and cloud storage trusted by over 100 million people.
-Lumo helps you stay productive, curious, and informed — without ever compromising your privacy.
+Omax Ai is the privacy-first AI assistant designed to help you stay productive, curious, and informed — without ever compromising your privacy.
 
-This is the native Android application wrapper for the Lumo web application ([lumo.proton.me](https://lumo.proton.me)) with addition features e.g. voice entry.
-
-
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
-    alt="Get it on Google Play"
-    height="80">](https://play.google.com/store/apps/details?id=me.proton.android.lumo)
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
-    alt="Get it on F-Droid"
-    height="80">](https://f-droid.org/en/packages/me.proton.android.lumo/)
+This is the native Android application wrapper for the Omax Ai web application with additional features e.g. voice entry.
 
 ## 🏗️ Architecture Overview
 
-The Lumo Android app follows a clean, modular architecture with clear separation of concerns:
+The Omax Ai Android app follows a clean, modular architecture with clear separation of concerns:
 
 ```mermaid
 graph TB
-    subgraph "📱 Lumo Android App"
+    subgraph "📱 Omax Ai Android App"
         MA["MainActivity
         📋 Single Activity + Compose Navigation"]
         LA["LumoApplication
@@ -129,8 +120,7 @@ graph TB
     end
 
     subgraph "🌍 External Services"
-        Web["Lumo Web App
-        🌐 lumo.proton.me"]
+        Web["Omax Ai Web App"]
         GP["Google Play Billing
         💳 Payment Processing"]
         Android["Android System
@@ -237,7 +227,7 @@ graph TB
 ## ✨ Key Features
 
 ### 🌐 **WebView Integration**
-- Displays the Lumo web application within a native Android `WebView` component
+- Displays the Omax Ai web application within a native Android `WebView` component
 - Uses modern `WebView` settings for optimal compatibility and performance
 - Includes JavaScript interface (`WebAppInterface`) for bidirectional communication between web app and native Android code
 - Handles file uploads initiated from the web interface using `WebChromeClient.onShowFileChooser`
@@ -262,7 +252,7 @@ graph TB
 The app supports multiple build variants across three dimensions to accommodate different use cases:
 
 ### 📱 **Environment Variants (env)**
-- **`production`**: Production environment (lumo.proton.me)
+- **`production`**: Production environment
 
 ### 🛡️ **Debugging Variants (debugging)**
 - **`standard`**: Full debugging capabilities including WebView debugging
@@ -310,10 +300,10 @@ The app supports multiple build variants across three dimensions to accommodate 
 5. For release builds, configure signing by setting environment variables:
    ```bash
    # Option 1: Set environment variables directly
-   export LUMO_KEY_ALIAS="your_key_alias"
-   export LUMO_KEY_PASSWORD="your_key_password"
-   export LUMO_KEYSTORE_PATH="/path/to/your/keystore.jks"
-   export LUMO_STORE_PASSWORD="your_store_password"
+   export OMAX_KEY_ALIAS="your_key_alias"
+   export OMAX_KEY_PASSWORD="your_key_password"
+   export OMAX_KEYSTORE_PATH="/path/to/your/keystore.jks"
+   export OMAX_STORE_PASSWORD="your_store_password"
    
    # Option 2: Use the .env file (recommended)
    cp .env.example .env
@@ -331,10 +321,10 @@ The app supports multiple build variants across three dimensions to accommodate 
 
 ### 🔧 **Environment Variables for CI/CD**
 For automated builds and CI/CD pipelines, you can also use these environment variables:
-- **`LUMO_KEY_ALIAS`**: Key alias in the keystore (defaults to "lumo")
-- **`LUMO_KEY_PASSWORD`**: Password for the signing key
-- **`LUMO_KEYSTORE_PATH`**: Full path to the keystore file
-- **`LUMO_STORE_PASSWORD`**: Password for the keystore
+- **`OMAX_KEY_ALIAS`**: Key alias in the keystore (defaults to "omax")
+- **`OMAX_KEY_PASSWORD`**: Password for the signing key
+- **`OMAX_KEYSTORE_PATH`**: Full path to the keystore file
+- **`OMAX_STORE_PASSWORD`**: Password for the keystore
 
 **Note**: Never commit these values to version control. Use your CI/CD platform's secret management system.
 

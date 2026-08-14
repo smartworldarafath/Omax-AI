@@ -126,9 +126,9 @@ build_release:
       policy: !reference [ .cache-policy, cache, policy ]
   script:
     - cp "$(pwd)/.secrets/sentry.properties" "$(pwd)/sentry.properties"
-    - export LUMO_KEYSTORE_PATH="$(pwd)/.secrets/$LUMO_KEY"
-    - export LUMO_STORE_PASSWORD=$(echo "$LUMO_STORE_PASSWORD_64" | base64 --decode)
-    - export LUMO_KEY_PASSWORD=$(echo "$LUMO_KEY_PASSWORD_64" | base64 --decode)
+    - export OMAX_KEYSTORE_PATH="$(pwd)/.secrets/$OMAX_KEY"
+    - export OMAX_STORE_PASSWORD=$(echo "$OMAX_STORE_PASSWORD_64" | base64 --decode)
+    - export OMAX_KEY_PASSWORD=$(echo "$OMAX_KEY_PASSWORD_64" | base64 --decode)
     - bundle exec fastlane assemble_releases
   artifacts:
     paths:
@@ -165,14 +165,14 @@ include:
 i18n-sync-crowdin:
   stage: i18n
   variables:
-    I18N_SYNC_CROWDIN_PROJECT: android-lumo
+    I18N_SYNC_CROWDIN_PROJECT: Omax-AI
     I18N_SYNC_BRANCH: main
   extends: .i18n-sync-crowdin-common-rules
 
 i18n-commit-locales:
   stage: i18n
   variables:
-    I18N_COMMIT_CROWDIN_PROJECT: android-lumo
+    I18N_COMMIT_CROWDIN_PROJECT: Omax-AI
     I18N_COMMIT_BRANCH_PUSH: main
     I18N_COMMIT_BRANCH_ALLOWED: main
   extends: .i18n-commit-locales-shared
@@ -185,7 +185,7 @@ release-publish-github:
   allow_failure: true
   extends: .release-publish-github-shared
   variables:
-    OAUTH_URL: "https://oauth2:${GITHUB_PAT}@github.com/ProtonLumo/android-lumo.git"
+    OAUTH_URL: "https://oauth2:${GITHUB_PAT}@github.com/smartworldarafath/Omax-AI.git"
     RELEASE_SYNC_FROM_BRANCH: main
     RELEASE_SYNC_TO_BRANCH: main
     GIT_DEPTH: 0

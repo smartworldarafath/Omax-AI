@@ -1,5 +1,5 @@
 {
-  "name": "Lumo Android Dev Environment",
+  "name": "Omax Ai Android Dev Environment",
   "image": "mcr.microsoft.com/devcontainers/python:3.13",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {

@@ -1,0 +1,194 @@
+[
+  {
+    "tag_name": "2.0.4-nogms",
+    "name": "2.0.4 without Play Services",
+    "body": "New in this version:\r\n\r\n• Custom Omax Ais — pick a specialised assistant from the composer's tools menu.\r\n• Image aspect ratio — choose the shape of generated images before you send.\r\n• More reliable on tablets — the composer now sizes itself correctly alongside the sidebar.\r\n• Fewer crashes — if the web view runs out of memory, Omax Ai now recovers and reloads instead of closing.\r\n• Fixed a navigation issue that could leave you on the wrong screen.\r\n\r\nThanks for using Omax Ai!\r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v2.0.4-nogms-release.apk",
+        "omax_name": "omax-ai-v2.0.4-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/2.0.4-nogms/lumo-v2.0.4-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "2.0.3-nogms",
+    "name": "2.0.3 without Play Services",
+    "body": "Omax Ai 2.0.3 focuses on a faster, smoother startup — the app launches quicker and loading, background, and keyboard animations no longer stutter. The loading and offline screens have been rebuilt as native screens, including a new connection-error screen with a Retry button that follows your light/dark theme. We've also polished the interface so the status and navigation bars match the app background.\r\n\r\nThanks for using Omax Ai!\r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v2.0.3-nogms-release.apk",
+        "omax_name": "omax-ai-v2.0.3-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/2.0.3-nogms/lumo-v2.0.3-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "2.0.2-nogms",
+    "name": "2.0.2 without Play Services",
+    "body": " This update improves stability and reliability:                                               \r\n  • Fixed a blank/white screen that could appear when reopening the app                         \r\n  • Fixed the loading screen getting stuck on slow or unstable connections                      \r\n  • Your typed messages and attachments are now kept when the app is restored in the background \r\n  • Smoother loading and general performance improvements                                       \r\n                                                                                                \r\n  Thanks for using Omax Ai!\r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v2.0.2-nogms-release.apk",
+        "omax_name": "omax-ai-v2.0.2-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/2.0.2-nogms/lumo-v2.0.2-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "2.0.1-nogms",
+    "name": "2.0.1 without Play Services",
+    "body": "New build contains many bug fixes that were reported by the community. Thank you.\r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v2.0.1-nogms-release.apk",
+        "omax_name": "omax-ai-v2.0.1-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/2.0.1-nogms/lumo-v2.0.1-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "2.0.0-nogms",
+    "name": "2.0.0 without Play Services",
+    "body": "Picture Purr-fect: describe it, Omax Ai draws it in chat. \r\nWhisker-Sharp Memory: recalls your context across chats—encrypted and yours. \r\nA Fresh Coat of Fur: new composer, background, app icon. \r\nA Clearer Cat-alog: Lite vs Max made simple. \r\nNo More Claws for Concern: instant alerts for files Omax Ai can't read. \r\nA Long Tail: long chats tidy themselves.\r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v2.0.0-nogms-release.apk",
+        "omax_name": "omax-ai-v2.0.0-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/2.0.0-nogms/lumo-v2.0.0-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "1.5.4-nogms",
+    "name": "1.5.4 without Play Services",
+    "body": "Whisked in a handy home screen widget so you can pounce on conversations instantly, plus a sleek native composer that makes crafting your messages as smooth as a cat nap in the sun.\r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v1.5.4-nogms-release.apk",
+        "omax_name": "omax-ai-v1.5.4-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/1.5.4-nogms/lumo-v1.5.4-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "1.5.2-nogms",
+    "name": "1.5.2 without Play Services",
+    "body": "Whisked in a handy home screen widget so you can pounce on conversations instantly, plus a sleek native composer that makes crafting your messages as smooth as a cat nap in the sun.\r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v1.5.2-nogms-release.apk",
+        "omax_name": "omax-ai-v1.5.2-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/1.5.2-nogms/lumo-v1.5.2-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "1.5.1-nogms",
+    "name": "1.5.1 without Play Services",
+    "body": "Whisked in a handy home screen widget so you can pounce on conversations instantly, plus a sleek native composer that makes crafting your messages as smooth as a cat nap in the sun.\r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v1.5.1-nogms-productionNoGms-release.apk",
+        "omax_name": "omax-ai-v1.5.1-nogms-productionNoGms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/1.5.1-nogms/lumo-v1.5.1-nogms-productionNoGms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "1.2.18-nogms",
+    "name": "1.2.18 without Play Services",
+    "body": "Paws what you’re doing and check out the latest Omax Ai Android upgrade—now it lands on its feet every time (stability that’s fur‑real) and finally understands your meows with purr‑fect speech‑to‑text. 😺📱✨\r\n\r\nUnleash was causing the FDroid build to fail.\r\nUnleash dependency was remove from this project. \r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v1.2.18-nogms-release.apk",
+        "omax_name": "omax-ai-v1.2.18-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/1.2.18-nogms/lumo-v1.2.18-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "1.2.17-nogms",
+    "name": "1.2.17 without Play Services",
+    "body": "Paws what you’re doing and check out the latest Omax Ai Android upgrade—now it lands on its feet every time (stability that’s fur‑real) and finally understands your meows with purr‑fect speech‑to‑text. 😺📱✨\r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v1.2.17-nogms-release.apk",
+        "omax_name": "omax-ai-v1.2.17-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/1.2.17-nogms/lumo-v1.2.17-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "1.2.11-nogms",
+    "name": "1.2.11 without Play Services",
+    "body": "Paws what you’re doing and check out the latest Omax Ai Android upgrade—now it lands on its feet every time (stability that’s fur‑real) and finally understands your meows with purr‑fect speech‑to‑text. 😺📱✨\r\n\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v1.2.11-nogms-release.apk",
+        "omax_name": "omax-ai-v1.2.11-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/1.2.11-nogms/lumo-v1.2.11-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "1.2.9-nogms",
+    "name": "1.2.9 without Play Services",
+    "body": "- Speech‑to‑text: We’ve got a purr‑fect setup—your device’s native voice recognizer now does the heavy lifting, meowing out your words in real time. If the built‑in kitty refuses to cooperate, we whisk you over to Vosk—another on‑device whisperer that never paws the job.\r\n- Keyboard: Those pesky paw‑press glitches? Gone. No more accidental cat‑naps on the wrong keys.\r\n- File uploads: Files now glide in smoother than a cat slipping through a narrow gap—no more tangled yarn balls of upload errors.\r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v1.2.9-nogms-release.apk",
+        "omax_name": "omax-ai-v1.2.9-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/1.2.9-nogms/lumo-v1.2.9-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "1.2.6-nogms",
+    "name": "1.2.6 without Play Services",
+    "body": "Improves app stability and navigation",
+    "assets": [
+      {
+        "original_name": "lumo-v1.2.6-nogms-release.apk",
+        "omax_name": "omax-ai-v1.2.6-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/1.2.6-nogms/lumo-v1.2.6-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "1.2.5-nogms",
+    "name": "1.2.5 without Play Services",
+    "body": "- ingores speech recognition if device doesn't support it",
+    "assets": [
+      {
+        "original_name": "lumo-v1.2.5-nogms-release.apk",
+        "omax_name": "omax-ai-v1.2.5-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/1.2.5-nogms/lumo-v1.2.5-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "1.2.4-nogms",
+    "name": "Omax Ai 1.2.4 without Play Services",
+    "body": "- preparations to release to fdroid\r\n- baseline profiles\r\n- removes billing permission\r\n- removes DependencyInfoBlock\r\n\r\nFunctionally identical to the Play Store version, this release excludes in-app purchasing.\r\n\r\n🐾 Compose UI now stays snug – no more drifting components; everything stays right where you expect it.\r\n\r\n🐾 Speech‑to‑Text finally listens – the voice engine is now crystal‑clear and responsive, so dictating feels as smooth as a cat’s purr.\r\n\r\n🐾 Orientation‑change hiccups squashed – rotating your device no longer throws the app into a tail‑spin; layouts adapt gracefully.\r\n\r\n🐾 A litter of minor bugs caught and fixed – from tiny glitches to stray UI quirks, we’ve chased them all away. 🐛➡️😸\r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v1.2.4-nogms-release.apk",
+        "omax_name": "omax-ai-v1.2.4-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/1.2.4-nogms/lumo-v1.2.4-nogms-release.apk"
+      }
+    ]
+  },
+  {
+    "tag_name": "1.2.0-noGms",
+    "name": "Omax Ai 1.2 Release - without Google Play Services",
+    "body": "Functionally identical to the Play Store version, this release excludes in-app purchasing.\r\n\r\n🐾 Compose UI now stays snug – no more drifting components; everything stays right where you expect it.\r\n\r\n🐾 Speech‑to‑Text finally listens – the voice engine is now crystal‑clear and responsive, so dictating feels as smooth as a cat’s purr.\r\n\r\n🐾 Orientation‑change hiccups squashed – rotating your device no longer throws the app into a tail‑spin; layouts adapt gracefully.\r\n\r\n🐾 A litter of minor bugs caught and fixed – from tiny glitches to stray UI quirks, we’ve chased them all away. 🐛➡️😸\r\n\r\n**This SHA256 fingerprint of the signing certificate can be used to verify the downloaded APK:**\r\n```\r\nA5:76:9B:88:D3:C5:00:F9:C5:8C:69:39:A7:B0:9D:C2:93:63:0C:8B:93:B6:9F:44:57:88:80:60:BF:1F:AA:43\r\n```",
+    "assets": [
+      {
+        "original_name": "lumo-v1.2.0-nogms-release.apk",
+        "omax_name": "omax-ai-v1.2.0-nogms-release.apk",
+        "original_download_url": "https://github.com/ProtonLumo/android-lumo/releases/download/1.2.0-noGms/lumo-v1.2.0-nogms-release.apk"
+      }
+    ]
+  }
+]

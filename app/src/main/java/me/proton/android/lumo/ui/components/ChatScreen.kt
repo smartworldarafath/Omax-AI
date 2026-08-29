@@ -35,6 +35,15 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.Surface
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import me.proton.android.lumo.MainActivity
 import me.proton.android.lumo.R
 import me.proton.android.lumo.config.LumoConfig
@@ -49,6 +58,9 @@ private const val FADE_OUT_DURATION_MS = 200
 fun ChatScreen(
     webView: WebView,
     chatScreenFlags: ChatScreenFlags,
+    onOpenUpdateScreen: () -> Unit = {},
+    isUpdateAvailable: Boolean = false,
+    updateVersionName: String? = null,
     modifier: Modifier = Modifier,
 ) {
     with(chatScreenFlags) {
@@ -58,14 +70,17 @@ fun ChatScreen(
                 .imePadding(),
             topBar = {
                 if (shouldShowBackButton) {
-                    TopBarWithNavigation {
-                        if (webView.canGoBack()) {
-                            webView.goBack()
-                        } else {
-                            webView.loadUrl(LumoConfig.LUMO_URL)
-                            webView.clearHistory()
-                        }
-                    }
+                    TopBarWithNavigation(
+                        handleBack = {
+                            if (webView.canGoBack()) {
+                                webView.goBack()
+                            } else {
+                                webView.loadUrl(LumoConfig.LUMO_URL)
+                                webView.clearHistory()
+                            }
+                        },
+                        onOpenUpdate = onOpenUpdateScreen
+                    )
                 }
             }
         ) { innerPadding ->
@@ -81,6 +96,42 @@ fun ChatScreen(
                         .fillMaxSize()
                         .imePadding()
                 )
+
+                // Top Floating Update / Info Pill Button when back button is not visible
+                if (!shouldShowBackButton) {
+                    Box(
+                        modifier = Modifier
+                            .align(Alignment.TopEnd)
+                            .padding(top = 10.dp, end = 12.dp)
+                    ) {
+                        Surface(
+                            onClick = onOpenUpdateScreen,
+                            shape = RoundedCornerShape(20.dp),
+                            color = if (isUpdateAvailable) Color(0xFF6C2BD9) else Color(0xCC202028),
+                            shadowElevation = 4.dp
+                        ) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
+                            ) {
+                                Icon(
+                                    imageVector = if (isUpdateAvailable) Icons.Default.Refresh else Icons.Default.Favorite,
+                                    contentDescription = "Updates & Info",
+                                    tint = if (isUpdateAvailable) Color.White else Color(0xFFFF80AB),
+                                    modifier = Modifier.size(16.dp)
+                                )
+                                Spacer(Modifier.width(6.dp))
+                                Text(
+                                    text = if (isUpdateAvailable) "Update v$updateVersionName" else "Info",
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.SemiBold,
+                                    color = Color.White
+                                )
+                            }
+                        }
+                    }
+                }
+
                 val showLoading = isLoading && !hasSeenLumoContainer && isLumoPage
                 LoadingScreen(show = showLoading)
             }
@@ -90,26 +141,25 @@ fun ChatScreen(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun TopBarWithNavigation(handleBack: () -> Unit) {
+private fun TopBarWithNavigation(
+    handleBack: () -> Unit,
+    onOpenUpdate: () -> Unit = {}
+) {
     TopAppBar(
         title = {},
         navigationIcon = {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
-                    .clip(RoundedCornerShape(24.dp)) // clip ripple to rounded shape
+                    .clip(RoundedCornerShape(24.dp))
                     .clickable(
                         interactionSource = remember { MutableInteractionSource() },
-                        indication = ripple(
-                            // ripple params
-                            bounded = true,
-                        )
+                        indication = ripple(bounded = true)
                     ) {
-                        Timber.tag(MainActivity.TAG)
-                            .i("Back button clicked, navigating to Lumo")
+                        Timber.tag(MainActivity.TAG).i("Back button clicked, navigating to Lumo")
                         handleBack()
                     }
-                    .padding(all = 8.dp) // optional padding
+                    .padding(all = 8.dp)
             ) {
                 Icon(
                     painter = painterResource(id = R.drawable.lumo_icon),
@@ -122,6 +172,15 @@ private fun TopBarWithNavigation(handleBack: () -> Unit) {
                     text = stringResource(id = R.string.back_to_lumo),
                     style = MaterialTheme.typography.titleLarge,
                     color = LumoTheme.colors.textNorm
+                )
+            }
+        },
+        actions = {
+            IconButton(onClick = onOpenUpdate) {
+                Icon(
+                    imageVector = Icons.Default.Favorite,
+                    contentDescription = "Updates & About",
+                    tint = Color(0xFFFF80AB)
                 )
             }
         }

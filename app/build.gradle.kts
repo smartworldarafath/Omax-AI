@@ -172,7 +172,7 @@ android {
         val variant = this
         variant.outputs.all {
             val output = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
-            val appName = "lumo"
+            val appName = "omax-ai"
             val versionName = variant.versionName
             val buildType = variant.buildType.name
             val flavor = variant.flavorName

@@ -18,4 +18,7 @@ sealed interface NavRoutes {
 
     @Serializable
     data class MissingPermission(val missingPermission: String) : NavRoutes
+
+    @Serializable
+    data object AppUpdate : NavRoutes
 }

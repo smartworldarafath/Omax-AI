@@ -12,6 +12,8 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
@@ -68,6 +70,8 @@ class MainActivity : ComponentActivity() {
     lateinit var activityProvider: ActivityProvider
     @Inject
     lateinit var inAppReviewManager: InAppReviewManager
+    @Inject
+    lateinit var updateManager: me.proton.android.lumo.update.UpdateManager
     private val viewModel: MainActivityViewModel by viewModels()
     private lateinit var webViewManager: WebViewManager
 
@@ -109,6 +113,10 @@ class MainActivity : ComponentActivity() {
 
         // Trigger the initial network connectivity check (independent of billing)
         viewModel.performInitialNetworkCheck()
+
+        lifecycleScope.launch {
+            updateManager.checkForUpdates()
+        }
 
         setContent {
             MainScreen(lumoChromeClient)
@@ -268,6 +276,9 @@ class MainActivity : ComponentActivity() {
             }
         }
 
+        val isUpdateAvailable by updateManager.isUpdateAvailable.collectAsStateWithLifecycle()
+        val latestRelease by updateManager.latestRelease.collectAsStateWithLifecycle()
+
         NavHost(
             navController = navController,
             startDestination = NavRoutes.Chat
@@ -281,6 +292,15 @@ class MainActivity : ComponentActivity() {
                         isLoading = uiState.isLoading,
                         isLumoPage = uiState.isLumoPage,
                     ),
+                    onOpenUpdateScreen = { navController.navigate(NavRoutes.AppUpdate) },
+                    isUpdateAvailable = isUpdateAvailable,
+                    updateVersionName = latestRelease?.tagName
+                )
+            }
+            composable<NavRoutes.AppUpdate> {
+                me.proton.android.lumo.ui.components.update.AppUpdateScreen(
+                    updateManager = updateManager,
+                    onNavigateBack = { navController.popBackStack() }
                 )
             }
             paymentRoutes(onDismiss = { navController.popBackStack() })

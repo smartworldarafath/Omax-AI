@@ -415,8 +415,6 @@ If you find **Omax AI** helpful and want to support ongoing development, mainten
 
 ---
 
-## ☕ Support / Buy Me a Coffee & Become a Sponsor
-
 <div align="center">
 
 <a href="SUPPORT.md" target="_blank">
